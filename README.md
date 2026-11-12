@@ -1,6 +1,8 @@
 # Clash Rules
 
-一份从 [Shadowrocket-Rules](https://github.com/LingJingMaster/Shadowrocket-Rules) 转换而来的 Mihomo（Clash.Meta）分流配置。保留原配置的服务分组、地区节点选择和规则优先级，添加自己的机场订阅后即可使用。
+一份从 [Shadowrocket-Rules](https://github.com/steven20027/Shadowrocket-Rules) 转换而来的 Mihomo（Clash.Meta）分流配置。保留原配置的服务分组、地区节点选择和规则优先级，添加自己的机场订阅后即可使用。
+
+> Fork 改动：新增 🇸🇬 新加坡节点分组（仅可选项，默认不变：谷歌仍日本、AI 仍美国）；新加坡/日本/美国分组正则补数据中心机场代码（SIN/SGP、TYO/NRT/OSA/KIX/HND/FUK、LAX/SFO/SJC/SEA/PDX/DEN/DFW/IAH/ATL/ORD/JFK/EWR/MIA/PHX/LAS/NYC）；rule-provider 链接改为本 fork 与 steven20027/Shadowrocket-Rules。
 
 > 本项目面向 Mihomo 内核，不兼容已经停止维护的 Clash Premium 老内核。
 
@@ -9,20 +11,20 @@
 | 服务 | 默认策略 | 可选策略 |
 |---|---|---|
 | 🧱 DNS 防泄露 | REJECT | 节点选择、DIRECT |
-| 📧 邮件服务 | 节点选择 | DIRECT、日本节点、香港节点 |
-| 🔍 谷歌服务 | 日本节点 | 香港节点、节点选择、DIRECT |
-| 🤖 AI 服务 | 美国节点 | 节点选择、DIRECT |
-| 🍎 苹果推送 | 节点选择 | DIRECT |
+| 📧 邮件服务 | 节点选择 | DIRECT、日本节点、香港节点、新加坡节点 |
+| 🔍 谷歌服务 | 日本节点 | 香港节点、新加坡节点、节点选择、DIRECT |
+| 🤖 AI 服务 | 美国节点 | 新加坡节点、节点选择、DIRECT |
+| 🍎 苹果推送 | 节点选择 | 新加坡节点、DIRECT |
 | 🍏 苹果服务 | DIRECT | 节点选择 |
 | 🏦 汇丰香港 | DIRECT | 香港节点、节点选择 |
 | 🏦 香港银行 | DIRECT | 香港节点、节点选择 |
 | 📈 券商服务 | 香港节点 | DIRECT、节点选择 |
-| 🌍 非中国 | 节点选择 | DIRECT、日本节点 |
-| 🐟 漏网之鱼 | 节点选择 | DIRECT、日本节点 |
+| 🌍 非中国 | 节点选择 | DIRECT、日本节点、新加坡节点 |
+| 🐟 漏网之鱼 | 节点选择 | DIRECT、日本节点、新加坡节点 |
 
 ## 快速开始
 
-1. 下载仓库中的 [`Clash.yaml`](https://raw.githubusercontent.com/LingJingMaster/Clash-Rules/refs/heads/main/Clash.yaml)。
+1. 下载仓库中的 [`Clash.yaml`](https://raw.githubusercontent.com/steven20027/Clash-Rules/refs/heads/main/Clash.yaml)。
 2. 在本地文本编辑器中找到 `proxy-providers.subscription.url`，替换为自己的订阅地址。
 3. 将修改后的文件导入 Clash Verge Rev、Clash Meta for Android，或其他使用 Mihomo 内核的客户端。
 4. 更新配置中的代理和规则集，确认地区节点组能识别你的节点名称。
