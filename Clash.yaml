@@ -159,7 +159,7 @@ proxy-groups:
     timeout: 5000
 
   - {name: '🧱 DNS 防泄露', type: select, proxies: [REJECT, '🚀 节点选择', DIRECT]}
-  - {name: '🛡️ WebRTC', type: select, proxies: [DIRECT, '🚀 节点选择', REJECT]}
+  - {name: '🛡️ WebRTC', type: select, proxies: [REJECT, '🚀 节点选择', DIRECT]}
   - {name: '🤖 AI 服务', type: select, proxies: ['🇺🇸 美国节点', '🇸🇬 新加坡节点', '🚀 节点选择', DIRECT, REJECT]}
   - {name: '📹 油管视频', type: select, proxies: ['🚀 节点选择', '🇸🇬 新加坡节点', DIRECT, REJECT]}
   - {name: '🔍 谷歌服务', type: select, proxies: ['🇯🇵 日本节点', '🇭🇰 香港节点', '🇸🇬 新加坡节点', '🚀 节点选择', DIRECT, REJECT]}
